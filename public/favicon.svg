@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Gradient Definition -->
+  <defs>
+    <linearGradient id="coffeeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#83523c" />
+      <stop offset="100%" stop-color="#422518" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2e7d32" />
+      <stop offset="100%" stop-color="#4caf50" />
+    </linearGradient>
+  </defs>
+  <!-- Coffee Bean -->
+  <path d="M 50 15 C 28 15 15 32 15 54 C 15 76 28 88 50 88 C 72 88 85 76 85 54 C 85 32 72 15 50 15 Z" fill="url(#coffeeGrad)" />
+  <!-- Center S-Crease of Coffee Bean -->
+  <path d="M 50 18 Q 42 38 52 52 Q 62 66 50 85" stroke="#f5eee7" stroke-width="4.5" stroke-linecap="round" fill="none" />
+  <!-- Sprout / Leaf overlay at top right -->
+  <path d="M 65 22 C 72 12 88 12 90 26 C 90 40 76 38 65 22 Z" fill="url(#leafGrad)" />
+  <path d="M 68 28 C 65 20 54 22 52 28 C 50 35 60 35 68 28 Z" fill="#81c784" />
+</svg>
