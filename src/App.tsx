@@ -5,7 +5,6 @@ import { CameraCapture } from './components/CameraCapture';
 import { SampleGallery } from './components/SampleGallery';
 import { ResultCard } from './components/ResultCard';
 import { BatchCalculator } from './components/BatchCalculator';
-import { PresentationMode } from './components/PresentationMode';
 import { DatasetManager } from './components/DatasetManager';
 import { AboutStandards } from './components/AboutStandards';
 import { Footer } from './components/Footer';
@@ -16,7 +15,7 @@ import { DetectionResult, FeedbackLog } from './types';
 import { Sparkles, AlertCircle, Coffee, CheckCircle2, Database } from 'lucide-react';
 
 export function App() {
-  const [activeTab, setActiveTab] = useState<'detect' | 'batch' | 'presentation' | 'dataset' | 'about'>('detect');
+  const [activeTab, setActiveTab] = useState<'detect' | 'batch' | 'dataset' | 'about'>('detect');
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [detectionResult, setDetectionResult] = useState<DetectionResult | null>(null);
@@ -134,13 +133,10 @@ export function App() {
         {/* TAB 2: KALKULATOR SNI (LOT BATCH) */}
         {activeTab === 'batch' && <BatchCalculator />}
 
-        {/* TAB 3: DEMO PITCH DECK (9 SLIDE PPT) */}
-        {activeTab === 'presentation' && <PresentationMode />}
-
-        {/* TAB 4: DATASET MANAGEMENT */}
+        {/* TAB 3: DATASET MANAGEMENT */}
         {activeTab === 'dataset' && <DatasetManager />}
 
-        {/* TAB 5: STANDAR & TATA KELOLA */}
+        {/* TAB 4: STANDAR & TATA KELOLA */}
         {activeTab === 'about' && <AboutStandards />}
       </main>
 

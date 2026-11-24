@@ -3,8 +3,8 @@ import { Coffee, Award, Sparkles, CheckCircle2, AlertCircle, Database } from 'lu
 import { isSupabaseConfigured } from '../lib/supabase';
 
 interface NavbarProps {
-  activeTab: 'detect' | 'batch' | 'presentation' | 'dataset' | 'about';
-  setActiveTab: (tab: 'detect' | 'batch' | 'presentation' | 'dataset' | 'about') => void;
+  activeTab: 'detect' | 'batch' | 'dataset' | 'about';
+  setActiveTab: (tab: 'detect' | 'batch' | 'dataset' | 'about') => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
@@ -55,16 +55,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
               🧮 Kalkulator SNI (Lot)
             </button>
             <button
-              onClick={() => setActiveTab('presentation')}
-              className={`px-4 py-2 text-xs font-semibold rounded-lg transition-all ${
-                activeTab === 'presentation'
-                  ? 'bg-amber-700 text-white shadow-sm'
-                  : 'text-amber-900 hover:text-amber-950 hover:bg-amber-100/60'
-              }`}
-            >
-              📑 Grand Demo Day (9 Slide)
-            </button>
-            <button
               onClick={() => setActiveTab('dataset')}
               className={`px-4 py-2 text-xs font-semibold rounded-lg transition-all ${
                 activeTab === 'dataset'
@@ -86,7 +76,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             </button>
           </nav>
 
-          {/* Vercel & Supabase Status Badge */}
+          {/* Supabase Status Badge & Info */}
           <div className="flex items-center gap-2">
             <span
               className={`hidden lg:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border ${
@@ -98,10 +88,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             >
               <Database className={`w-3.5 h-3.5 ${isSupabaseConfigured ? 'text-emerald-600' : 'text-stone-400'}`} />
               {isSupabaseConfigured ? 'Supabase Connected' : 'Local Mode'}
-            </span>
-            <span className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-stone-100 text-stone-700 border border-stone-200">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              Vercel Ready
             </span>
             <div className="text-right">
               <span className="block text-xs font-bold text-stone-800">KEB1322</span>
@@ -127,14 +113,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             }`}
           >
             🧮 Kalkulator SNI
-          </button>
-          <button
-            onClick={() => setActiveTab('presentation')}
-            className={`px-3 py-1.5 text-xs font-medium rounded-lg whitespace-nowrap ${
-              activeTab === 'presentation' ? 'bg-amber-700 text-white' : 'text-stone-600 bg-stone-100'
-            }`}
-          >
-            📑 PPT Demo
           </button>
           <button
             onClick={() => setActiveTab('dataset')}

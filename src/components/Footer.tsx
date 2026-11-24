@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
               KEB1322 Grand Demo Day · Perancangan Produk AI untuk Pertanian
             </p>
             <p className="flex items-center justify-center md:justify-end gap-1 text-[11px] text-stone-400">
-              Dibuat untuk petani & industri kopi Indonesia · Siap dideploy di Vercel
+              Dibuat untuk petani & industri kopi Indonesia
             </p>
           </div>
         </div>
@@ -36,8 +36,6 @@ export const Footer: React.FC = () => {
             <span>Standar SNI 01-2907-2008</span>
             <span>•</span>
             <span>Client-side AI Zero-Cost</span>
-            <span>•</span>
-            <span className="text-emerald-700 font-semibold">100% Vercel Edge Ready</span>
           </div>
         </div>
       </div>
