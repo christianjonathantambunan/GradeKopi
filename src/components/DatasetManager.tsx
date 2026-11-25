@@ -82,7 +82,7 @@ export const DatasetManager: React.FC = () => {
           </div>
           <div className="p-3 bg-stone-100 rounded-2xl text-right">
             <span className="text-[10px] text-stone-500 block uppercase font-bold">Total Sampel Asli</span>
-            <span className="text-2xl font-black text-stone-900">312 Foto</span>
+            <span className="text-2xl font-black text-stone-900">622 Foto</span>
           </div>
         </div>
       </div>
@@ -133,13 +133,13 @@ export const DatasetManager: React.FC = () => {
           </span>
           <h4 className="text-base font-bold text-stone-900">Biji Berjamur</h4>
           <div className="text-2xl font-black text-rose-700 mt-2">
-            12 <span className="text-xs font-normal text-stone-500">foto</span>
+            22 <span className="text-xs font-normal text-stone-500">foto</span>
           </div>
           <p className="text-[11px] text-stone-500 mt-1">
-            12 sampel awal (Direkomendasikan tambah 30+)
+            20 train + 2 test (Cacat spora jamur)
           </p>
           <span className="inline-block mt-3 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">
-            ⏳ Perlu Tambahan
+            ✓ Siap Pakai
           </span>
         </div>
 
@@ -151,13 +151,13 @@ export const DatasetManager: React.FC = () => {
           </span>
           <h4 className="text-base font-bold text-stone-900">Biji Asam</h4>
           <div className="text-2xl font-black text-orange-700 mt-2">
-            {customItems.filter((i) => i.category === 'asam').length} <span className="text-xs font-normal text-stone-500">foto diunggah</span>
+            200 <span className="text-xs font-normal text-stone-500">foto</span>
           </div>
           <p className="text-[11px] text-stone-500 mt-1">
-            Fermentasi anaerobik berlebih / stinker bean
+            100 train + 100 test (Fermentasi berlebih)
           </p>
           <span className="inline-block mt-3 px-2 py-0.5 rounded text-[10px] font-bold bg-orange-100 text-orange-800">
-            ⏳ Sedang Dikumpulkan
+            ✓ Siap Pakai
           </span>
         </div>
       </div>
