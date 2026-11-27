@@ -67,22 +67,22 @@ export const DatasetManager: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto space-y-8">
       {/* Header */}
-      <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm">
+      <div className="bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 border border-stone-200 dark:border-stone-800 shadow-sm transition-colors">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <span className="text-xs font-bold text-amber-800 bg-amber-100 px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2">
+            <span className="text-xs font-bold text-amber-800 dark:text-amber-400 bg-amber-100 dark:bg-amber-950/60 px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-2">
               Koleksi Dataset Biji Kopi
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 dark:text-stone-100">
               Status Dataset & Penambahan Foto Baru
             </h2>
-            <p className="text-xs sm:text-sm text-stone-500 mt-1 max-w-2xl">
+            <p className="text-xs sm:text-sm text-stone-500 dark:text-stone-400 mt-1 max-w-2xl">
               Pantau jumlah dataset pelatihan Anda dan tambahkan foto biji asam/berjamur baru secara bertahap langsung melalui antarmuka ini.
             </p>
           </div>
-          <div className="p-3 bg-stone-100 rounded-2xl text-right">
-            <span className="text-[10px] text-stone-500 block uppercase font-bold">Total Sampel Asli</span>
-            <span className="text-2xl font-black text-stone-900">622 Foto</span>
+          <div className="p-3 bg-stone-100 dark:bg-stone-800 rounded-2xl text-right">
+            <span className="text-[10px] text-stone-500 dark:text-stone-400 block uppercase font-bold">Total Sampel Asli</span>
+            <span className="text-2xl font-black text-stone-900 dark:text-stone-100">622 Foto</span>
           </div>
         </div>
       </div>
@@ -90,96 +90,96 @@ export const DatasetManager: React.FC = () => {
       {/* Dataset Statistics Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
         {/* 1. Biji Bagus */}
-        <div className="bg-white p-5 rounded-3xl border border-stone-200 shadow-sm relative overflow-hidden">
+        <div className="bg-white dark:bg-stone-900 p-5 rounded-3xl border border-stone-200 dark:border-stone-800 shadow-sm relative overflow-hidden transition-colors">
           <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 mb-2"></div>
-          <span className="text-xs font-bold text-stone-400 uppercase tracking-wider block">
+          <span className="text-xs font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider block">
             Kategori 1
           </span>
-          <h4 className="text-base font-bold text-stone-900">Biji Bagus</h4>
-          <div className="text-2xl font-black text-emerald-700 mt-2">
-            200 <span className="text-xs font-normal text-stone-500">foto</span>
+          <h4 className="text-base font-bold text-stone-900 dark:text-stone-100">Biji Bagus</h4>
+          <div className="text-2xl font-black text-emerald-700 dark:text-emerald-400 mt-2">
+            200 <span className="text-xs font-normal text-stone-500 dark:text-stone-400">foto</span>
           </div>
-          <p className="text-[11px] text-stone-500 mt-1">
+          <p className="text-[11px] text-stone-500 dark:text-stone-400 mt-1">
             100 train + 100 test (Lengkap & Seimbang)
           </p>
-          <span className="inline-block mt-3 px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">
+          <span className="inline-block mt-3 px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300">
             ✓ Siap Pakai
           </span>
         </div>
 
         {/* 2. Biji Rusak */}
-        <div className="bg-white p-5 rounded-3xl border border-stone-200 shadow-sm relative overflow-hidden">
+        <div className="bg-white dark:bg-stone-900 p-5 rounded-3xl border border-stone-200 dark:border-stone-800 shadow-sm relative overflow-hidden transition-colors">
           <div className="w-2.5 h-2.5 rounded-full bg-amber-500 mb-2"></div>
-          <span className="text-xs font-bold text-stone-400 uppercase tracking-wider block">
+          <span className="text-xs font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider block">
             Kategori 2
           </span>
-          <h4 className="text-base font-bold text-stone-900">Biji Pecah/Rusak</h4>
-          <div className="text-2xl font-black text-amber-700 mt-2">
-            200 <span className="text-xs font-normal text-stone-500">foto</span>
+          <h4 className="text-base font-bold text-stone-900 dark:text-stone-100">Biji Pecah/Rusak</h4>
+          <div className="text-2xl font-black text-amber-700 dark:text-amber-400 mt-2">
+            200 <span className="text-xs font-normal text-stone-500 dark:text-stone-400">foto</span>
           </div>
-          <p className="text-[11px] text-stone-500 mt-1">
+          <p className="text-[11px] text-stone-500 dark:text-stone-400 mt-1">
             100 train + 100 test (Cacat fisik mekanis)
           </p>
-          <span className="inline-block mt-3 px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">
+          <span className="inline-block mt-3 px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300">
             ✓ Siap Pakai
           </span>
         </div>
 
         {/* 3. Biji Berjamur */}
-        <div className="bg-white p-5 rounded-3xl border border-stone-200 shadow-sm relative overflow-hidden">
+        <div className="bg-white dark:bg-stone-900 p-5 rounded-3xl border border-stone-200 dark:border-stone-800 shadow-sm relative overflow-hidden transition-colors">
           <div className="w-2.5 h-2.5 rounded-full bg-rose-500 mb-2"></div>
-          <span className="text-xs font-bold text-stone-400 uppercase tracking-wider block">
+          <span className="text-xs font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider block">
             Kategori 3
           </span>
-          <h4 className="text-base font-bold text-stone-900">Biji Berjamur</h4>
-          <div className="text-2xl font-black text-rose-700 mt-2">
-            22 <span className="text-xs font-normal text-stone-500">foto</span>
+          <h4 className="text-base font-bold text-stone-900 dark:text-stone-100">Biji Berjamur</h4>
+          <div className="text-2xl font-black text-rose-700 dark:text-rose-400 mt-2">
+            22 <span className="text-xs font-normal text-stone-500 dark:text-stone-400">foto</span>
           </div>
-          <p className="text-[11px] text-stone-500 mt-1">
+          <p className="text-[11px] text-stone-500 dark:text-stone-400 mt-1">
             20 train + 2 test (Cacat spora jamur)
           </p>
-          <span className="inline-block mt-3 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 text-rose-800">
+          <span className="inline-block mt-3 px-2 py-0.5 rounded text-[10px] font-bold bg-rose-100 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300">
             ✓ Siap Pakai
           </span>
         </div>
 
         {/* 4. Biji Asam */}
-        <div className="bg-white p-5 rounded-3xl border border-stone-200 shadow-sm relative overflow-hidden">
+        <div className="bg-white dark:bg-stone-900 p-5 rounded-3xl border border-stone-200 dark:border-stone-800 shadow-sm relative overflow-hidden transition-colors">
           <div className="w-2.5 h-2.5 rounded-full bg-orange-500 mb-2"></div>
-          <span className="text-xs font-bold text-stone-400 uppercase tracking-wider block">
+          <span className="text-xs font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider block">
             Kategori 4
           </span>
-          <h4 className="text-base font-bold text-stone-900">Biji Asam</h4>
-          <div className="text-2xl font-black text-orange-700 mt-2">
-            200 <span className="text-xs font-normal text-stone-500">foto</span>
+          <h4 className="text-base font-bold text-stone-900 dark:text-stone-100">Biji Asam</h4>
+          <div className="text-2xl font-black text-orange-700 dark:text-orange-400 mt-2">
+            200 <span className="text-xs font-normal text-stone-500 dark:text-stone-400">foto</span>
           </div>
-          <p className="text-[11px] text-stone-500 mt-1">
+          <p className="text-[11px] text-stone-500 dark:text-stone-400 mt-1">
             100 train + 100 test (Fermentasi berlebih)
           </p>
-          <span className="inline-block mt-3 px-2 py-0.5 rounded text-[10px] font-bold bg-orange-100 text-orange-800">
+          <span className="inline-block mt-3 px-2 py-0.5 rounded text-[10px] font-bold bg-orange-100 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300">
             ✓ Siap Pakai
           </span>
         </div>
       </div>
 
       {/* Upload Additional Data Section */}
-      <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-6">
-        <div className="flex items-center gap-3 border-b border-stone-200 pb-4">
-          <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center">
+      <div className="bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 border border-stone-200 dark:border-stone-800 shadow-sm space-y-6 transition-colors">
+        <div className="flex items-center gap-3 border-b border-stone-200 dark:border-stone-800 pb-4">
+          <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-400 flex items-center justify-center">
             <Plus className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-base font-bold text-stone-900">
+            <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">
               Formulir Unggah Foto Tambahan (Biji Asam & Berjamur)
             </h3>
-            <p className="text-xs text-stone-500">
+            <p className="text-xs text-stone-500 dark:text-stone-400">
               Pilih kategori defect lalu unggah satu atau beberapa foto biji kopi untuk memperkaya dataset proyek.
             </p>
           </div>
         </div>
 
         {uploadSuccess && (
-          <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-xs font-semibold flex items-center gap-2">
+          <div className="p-3 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl text-emerald-800 dark:text-emerald-300 text-xs font-semibold flex items-center gap-2">
             <CheckCircle className="w-4 h-4" /> {uploadSuccess}
           </div>
         )}
@@ -188,7 +188,7 @@ export const DatasetManager: React.FC = () => {
           {/* Form settings */}
           <div className="space-y-4">
             <div>
-              <label className="text-xs font-bold text-stone-700 block mb-1">
+              <label className="text-xs font-bold text-stone-700 dark:text-stone-300 block mb-1">
                 Pilih Kategori Biji yang Ingin Ditambahkan:
               </label>
               <div className="grid grid-cols-2 gap-2">
@@ -197,8 +197,8 @@ export const DatasetManager: React.FC = () => {
                   onClick={() => setSelectedCategory('asam')}
                   className={`p-3 rounded-xl border text-xs font-bold text-left transition-all ${
                     selectedCategory === 'asam'
-                      ? 'border-orange-600 bg-orange-50 text-orange-950'
-                      : 'border-stone-200 text-stone-700 hover:bg-stone-50'
+                      ? 'border-orange-600 bg-orange-50 dark:bg-orange-950/40 text-orange-950 dark:text-orange-200'
+                      : 'border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800'
                   }`}
                 >
                   🟠 Biji Asam (Fermentasi)
@@ -208,8 +208,8 @@ export const DatasetManager: React.FC = () => {
                   onClick={() => setSelectedCategory('jamur')}
                   className={`p-3 rounded-xl border text-xs font-bold text-left transition-all ${
                     selectedCategory === 'jamur'
-                      ? 'border-rose-600 bg-rose-50 text-rose-950'
-                      : 'border-stone-200 text-stone-700 hover:bg-stone-50'
+                      ? 'border-rose-600 bg-rose-50 dark:bg-rose-950/40 text-rose-950 dark:text-rose-200'
+                      : 'border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800'
                   }`}
                 >
                   🟣 Biji Berjamur
@@ -219,8 +219,8 @@ export const DatasetManager: React.FC = () => {
                   onClick={() => setSelectedCategory('rusak')}
                   className={`p-3 rounded-xl border text-xs font-bold text-left transition-all ${
                     selectedCategory === 'rusak'
-                      ? 'border-amber-600 bg-amber-50 text-amber-950'
-                      : 'border-stone-200 text-stone-700 hover:bg-stone-50'
+                      ? 'border-amber-600 bg-amber-50 dark:bg-amber-950/40 text-amber-950 dark:text-amber-200'
+                      : 'border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800'
                   }`}
                 >
                   🟡 Biji Pecah / Rusak
@@ -230,8 +230,8 @@ export const DatasetManager: React.FC = () => {
                   onClick={() => setSelectedCategory('bagus')}
                   className={`p-3 rounded-xl border text-xs font-bold text-left transition-all ${
                     selectedCategory === 'bagus'
-                      ? 'border-emerald-600 bg-emerald-50 text-emerald-950'
-                      : 'border-stone-200 text-stone-700 hover:bg-stone-50'
+                      ? 'border-emerald-600 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-950 dark:text-emerald-200'
+                      : 'border-stone-200 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:bg-stone-50 dark:hover:bg-stone-800'
                   }`}
                 >
                   🟢 Biji Bagus
@@ -239,8 +239,8 @@ export const DatasetManager: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-stone-50 p-4 rounded-2xl border border-stone-200 text-xs text-stone-600 space-y-2">
-              <span className="font-bold text-stone-800 block">💡 Tips Pengambilan Foto Biji Kopi:</span>
+            <div className="bg-stone-50 dark:bg-stone-800/60 p-4 rounded-2xl border border-stone-200 dark:border-stone-800 text-xs text-stone-600 dark:text-stone-300 space-y-2">
+              <span className="font-bold text-stone-800 dark:text-stone-200 block">💡 Tips Pengambilan Foto Biji Kopi:</span>
               <ul className="list-disc list-inside space-y-1 text-[11px]">
                 <li>Gunakan latar belakang berwarna terang / netral (kertas putih atau meja polos).</li>
                 <li>Pastikan pencahayaan cukup terang dan merata (hindari bayangan gelap tangan/HP).</li>
@@ -250,12 +250,12 @@ export const DatasetManager: React.FC = () => {
           </div>
 
           {/* Upload input box */}
-          <div className="flex flex-col justify-center items-center border-2 border-dashed border-stone-300 rounded-2xl p-6 text-center hover:border-amber-500 bg-stone-50/50 transition-all">
-            <ImageIcon className="w-10 h-10 text-stone-400 mb-2" />
-            <h4 className="text-xs font-bold text-stone-800 mb-1">
+          <div className="flex flex-col justify-center items-center border-2 border-dashed border-stone-300 dark:border-stone-700 rounded-2xl p-6 text-center hover:border-amber-500 bg-stone-50/50 dark:bg-stone-800/30 transition-all">
+            <ImageIcon className="w-10 h-10 text-stone-400 dark:text-stone-500 mb-2" />
+            <h4 className="text-xs font-bold text-stone-800 dark:text-stone-200 mb-1">
               Pilih Foto Biji {selectedCategory.toUpperCase()}
             </h4>
-            <p className="text-[11px] text-stone-500 mb-4">
+            <p className="text-[11px] text-stone-500 dark:text-stone-400 mb-4">
               Bisa memilih beberapa file foto sekaligus (.jpg, .png, .webp)
             </p>
 
@@ -274,14 +274,14 @@ export const DatasetManager: React.FC = () => {
 
         {/* Gallery of uploaded additions */}
         {customItems.length > 0 && (
-          <div className="pt-4 border-t border-stone-200">
+          <div className="pt-4 border-t border-stone-200 dark:border-stone-800">
             <div className="flex items-center justify-between mb-3">
-              <h4 className="text-xs font-bold text-stone-800 uppercase tracking-wider">
+              <h4 className="text-xs font-bold text-stone-800 dark:text-stone-200 uppercase tracking-wider">
                 Foto Baru yang Ditambahkan ({customItems.length} Foto)
               </h4>
               <button
                 onClick={() => setCustomItems([])}
-                className="text-xs text-rose-600 hover:text-rose-800 font-semibold"
+                className="text-xs text-rose-600 hover:text-rose-800 dark:text-rose-400 dark:hover:text-rose-300 font-semibold"
               >
                 Hapus Semua
               </button>
@@ -291,7 +291,7 @@ export const DatasetManager: React.FC = () => {
               {customItems.map((item) => (
                 <div
                   key={item.id}
-                  className="group relative aspect-square rounded-xl overflow-hidden border border-stone-200 bg-stone-100"
+                  className="group relative aspect-square rounded-xl overflow-hidden border border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-800"
                 >
                   <img
                     src={item.imageSrc}

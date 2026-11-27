@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-stone-50 text-stone-900 selection:bg-amber-200 selection:text-amber-900;
+    @apply bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 selection:bg-amber-200 selection:text-amber-900 transition-colors duration-200;
   }
 }
 
@@ -22,6 +22,16 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #a8a29e;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1c1917;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #44403c;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #57534e;
 }
 
 @keyframes pulseSlow {

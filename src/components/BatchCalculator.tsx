@@ -82,30 +82,30 @@ export const BatchCalculator: React.FC = () => {
 
       {/* Preset Buttons */}
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-xs font-bold text-stone-500 uppercase tracking-wider mr-2">
+        <span className="text-xs font-bold text-stone-500 dark:text-stone-400 uppercase tracking-wider mr-2">
           Pilihan Simulasi Cepat:
         </span>
         <button
           onClick={() => applyPreset('specialty')}
-          className="px-3.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-xs font-semibold transition-all"
+          className="px-3.5 py-1.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/40 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 text-xs font-semibold transition-all"
         >
           🏆 Target Grade 1 (Spesialti)
         </button>
         <button
           onClick={() => applyPreset('good')}
-          className="px-3.5 py-1.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-800 border border-blue-200 text-xs font-semibold transition-all"
+          className="px-3.5 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950/40 hover:bg-blue-100 dark:hover:bg-blue-900/50 text-blue-800 dark:text-blue-300 border border-blue-200 dark:border-blue-800 text-xs font-semibold transition-all"
         >
           ☕ Grade 2 (Komersial Baik)
         </button>
         <button
           onClick={() => applyPreset('mixed')}
-          className="px-3.5 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 text-xs font-semibold transition-all"
+          className="px-3.5 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/40 hover:bg-amber-100 dark:hover:bg-amber-900/50 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-semibold transition-all"
         >
           ⚠️ Lot Campuran Sebelum Sortasi
         </button>
         <button
           onClick={() => applyPreset('moldy')}
-          className="px-3.5 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-800 border border-rose-200 text-xs font-semibold transition-all"
+          className="px-3.5 py-1.5 rounded-xl bg-rose-50 dark:bg-rose-950/40 hover:bg-rose-100 dark:hover:bg-rose-900/50 text-rose-800 dark:text-rose-300 border border-rose-200 dark:border-rose-800 text-xs font-semibold transition-all"
         >
           🛑 Lot Berjamur Tinggi (Ditolak)
         </button>
@@ -114,13 +114,13 @@ export const BatchCalculator: React.FC = () => {
       {/* Main Calculator Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Form: Sliders & Counters */}
-        <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-6">
-          <div className="flex items-center justify-between border-b border-stone-200 pb-4">
+        <div className="lg:col-span-7 bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 border border-stone-200 dark:border-stone-800 shadow-sm space-y-6 transition-colors">
+          <div className="flex items-center justify-between border-b border-stone-200 dark:border-stone-800 pb-4">
             <div>
-              <h3 className="text-base font-bold text-stone-900">
+              <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">
                 Input Sampel Biji Kopi
               </h3>
-              <p className="text-xs text-stone-500">
+              <p className="text-xs text-stone-500 dark:text-stone-400">
                 Total sampel saat ini: <strong>{totalBeans} biji</strong>
               </p>
             </div>
@@ -131,7 +131,7 @@ export const BatchCalculator: React.FC = () => {
                 setJamurCount(0);
                 setAsamCount(0);
               }}
-              className="p-2 text-stone-400 hover:text-stone-700 text-xs flex items-center gap-1 font-semibold"
+              className="p-2 text-stone-400 hover:text-stone-700 dark:hover:text-stone-200 text-xs flex items-center gap-1 font-semibold"
               title="Reset ke Nol Cacat"
             >
               <RotateCcw className="w-3.5 h-3.5" /> Reset
@@ -142,10 +142,10 @@ export const BatchCalculator: React.FC = () => {
             {/* 1. Biji Bagus */}
             <div>
               <div className="flex items-center justify-between text-xs font-bold mb-1">
-                <span className="text-emerald-700 flex items-center gap-1.5">
+                <span className="text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500"></span> Biji Bagus / Utuh (Nilai Cacat: 0)
                 </span>
-                <span className="text-stone-800">{bagusCount} Biji</span>
+                <span className="text-stone-800 dark:text-stone-200">{bagusCount} Biji</span>
               </div>
               <input
                 type="range"
@@ -160,10 +160,10 @@ export const BatchCalculator: React.FC = () => {
             {/* 2. Biji Rusak / Pecah */}
             <div>
               <div className="flex items-center justify-between text-xs font-bold mb-1">
-                <span className="text-amber-700 flex items-center gap-1.5">
+                <span className="text-amber-700 dark:text-amber-400 flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-amber-500"></span> Biji Rusak / Pecah (Nilai Cacat: 0.2 / biji)
                 </span>
-                <span className="text-stone-800">
+                <span className="text-stone-800 dark:text-stone-200">
                   {rusakCount} Biji ({defectRusak} Cacat)
                 </span>
               </div>
@@ -180,10 +180,10 @@ export const BatchCalculator: React.FC = () => {
             {/* 3. Biji Berjamur */}
             <div>
               <div className="flex items-center justify-between text-xs font-bold mb-1">
-                <span className="text-rose-700 flex items-center gap-1.5">
+                <span className="text-rose-700 dark:text-rose-400 flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-rose-500"></span> Biji Berjamur (Nilai Cacat: 1.0 / biji)
                 </span>
-                <span className="text-stone-800">
+                <span className="text-stone-800 dark:text-stone-200">
                   {jamurCount} Biji ({defectJamur} Cacat)
                 </span>
               </div>
@@ -200,10 +200,10 @@ export const BatchCalculator: React.FC = () => {
             {/* 4. Biji Asam / Fermentasi */}
             <div>
               <div className="flex items-center justify-between text-xs font-bold mb-1">
-                <span className="text-orange-700 flex items-center gap-1.5">
+                <span className="text-orange-700 dark:text-orange-400 flex items-center gap-1.5">
                   <span className="w-2.5 h-2.5 rounded-full bg-orange-500"></span> Biji Asam / Stinker (Nilai Cacat: 1.0 / biji)
                 </span>
-                <span className="text-stone-800">
+                <span className="text-stone-800 dark:text-stone-200">
                   {asamCount} Biji ({defectAsam} Cacat)
                 </span>
               </div>
@@ -218,8 +218,8 @@ export const BatchCalculator: React.FC = () => {
             </div>
 
             {/* Berat Lot Panen */}
-            <div className="pt-3 border-t border-stone-100">
-              <label className="text-xs font-bold text-stone-700 block mb-1">
+            <div className="pt-3 border-t border-stone-100 dark:border-stone-800">
+              <label className="text-xs font-bold text-stone-700 dark:text-stone-300 block mb-1">
                 Estimasi Total Berat Lot Panen Petani (kg):
               </label>
               <div className="flex items-center gap-3">
@@ -229,9 +229,9 @@ export const BatchCalculator: React.FC = () => {
                   max="10000"
                   value={lotWeightKg}
                   onChange={(e) => setLotWeightKg(Math.max(1, Number(e.target.value)))}
-                  className="w-32 text-sm font-bold p-2.5 rounded-xl border border-stone-200 focus:ring-2 focus:ring-amber-500 focus:outline-none"
+                  className="w-32 text-sm font-bold p-2.5 rounded-xl border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 text-stone-900 dark:text-stone-100 focus:ring-2 focus:ring-amber-500 focus:outline-none"
                 />
-                <span className="text-xs text-stone-500">Kilogram (Green Bean)</span>
+                <span className="text-xs text-stone-500 dark:text-stone-400">Kilogram (Green Bean)</span>
               </div>
             </div>
           </div>
@@ -240,8 +240,8 @@ export const BatchCalculator: React.FC = () => {
         {/* Right Card: Grade Result & Business Impact */}
         <div className="lg:col-span-5 space-y-6">
           {/* Grade Outcome Card */}
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm text-center relative overflow-hidden">
-            <span className="text-xs font-bold text-stone-400 uppercase tracking-wider block mb-1">
+          <div className="bg-white dark:bg-stone-900 rounded-3xl p-6 sm:p-8 border border-stone-200 dark:border-stone-800 shadow-sm text-center relative overflow-hidden transition-colors">
+            <span className="text-xs font-bold text-stone-400 dark:text-stone-500 uppercase tracking-wider block mb-1">
               Hasil Mutu SNI 01-2907
             </span>
 
@@ -249,31 +249,31 @@ export const BatchCalculator: React.FC = () => {
               {batchGrade.title}
             </div>
 
-            <div className="text-4xl sm:text-5xl font-black text-stone-900 tracking-tight mb-2">
+            <div className="text-4xl sm:text-5xl font-black text-stone-900 dark:text-stone-100 tracking-tight mb-2">
               {batchGrade.grade}
             </div>
 
-            <div className="text-xs font-bold text-stone-600 mb-4 bg-stone-100 py-1.5 px-3 rounded-xl inline-block">
-              Total Nilai Cacat: <span className="text-amber-800 text-sm">{totalDefects} Poin</span>
+            <div className="text-xs font-bold text-stone-600 dark:text-stone-300 mb-4 bg-stone-100 dark:bg-stone-800 py-1.5 px-3 rounded-xl inline-block">
+              Total Nilai Cacat: <span className="text-amber-800 dark:text-amber-400 text-sm">{totalDefects} Poin</span>
             </div>
 
-            <p className="text-xs text-stone-600 leading-relaxed mb-6">
+            <p className="text-xs text-stone-600 dark:text-stone-300 leading-relaxed mb-6">
               {batchGrade.description}
             </p>
 
-            <div className="border-t border-stone-200 pt-4 text-left space-y-2 text-xs">
-              <div className="flex justify-between py-1 border-b border-stone-100">
-                <span className="text-stone-500">Standar Nilai Cacat</span>
-                <span className="font-bold text-stone-800">
+            <div className="border-t border-stone-200 dark:border-stone-800 pt-4 text-left space-y-2 text-xs">
+              <div className="flex justify-between py-1 border-b border-stone-100 dark:border-stone-800">
+                <span className="text-stone-500 dark:text-stone-400">Standar Nilai Cacat</span>
+                <span className="font-bold text-stone-800 dark:text-stone-200">
                   {batchGrade.grade === 'Grade 1' && '≤ 11 Poin'}
                   {batchGrade.grade === 'Grade 2' && '12 – 25 Poin'}
                   {batchGrade.grade === 'Grade 3' && '26 – 44 Poin'}
                   {batchGrade.grade === 'Grade 4' && '45 – 80 Poin'}
                 </span>
               </div>
-              <div className="flex justify-between py-1 border-b border-stone-100">
-                <span className="text-stone-500">Estimasi Harga Jual</span>
-                <span className="font-bold text-emerald-700">{batchGrade.marketPriceEstimate}</span>
+              <div className="flex justify-between py-1 border-b border-stone-100 dark:border-stone-800">
+                <span className="text-stone-500 dark:text-stone-400">Estimasi Harga Jual</span>
+                <span className="font-bold text-emerald-700 dark:text-emerald-400">{batchGrade.marketPriceEstimate}</span>
               </div>
             </div>
           </div>

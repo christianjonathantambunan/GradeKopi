@@ -66,19 +66,19 @@ export const DropzoneUpload: React.FC<DropzoneUploadProps> = ({
         onClick={() => fileInputRef.current?.click()}
         className={`relative border-2 border-dashed rounded-3xl p-8 sm:p-12 text-center cursor-pointer transition-all ${
           isDragOver
-            ? 'border-amber-600 bg-amber-50/70 scale-[1.01]'
-            : 'border-stone-300 hover:border-amber-500 bg-white hover:bg-stone-50/80 shadow-sm'
+            ? 'border-amber-600 bg-amber-50/70 dark:bg-amber-950/30 scale-[1.01]'
+            : 'border-stone-300 dark:border-stone-700 hover:border-amber-500 dark:hover:border-amber-500 bg-white dark:bg-stone-900 hover:bg-stone-50/80 dark:hover:bg-stone-850 shadow-sm'
         }`}
       >
         <div className="max-w-md mx-auto flex flex-col items-center">
-          <div className="w-16 h-16 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+          <div className="w-16 h-16 rounded-2xl bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-400 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
             <UploadCloud className="w-8 h-8" />
           </div>
 
-          <h3 className="text-lg font-bold text-stone-800 mb-1">
+          <h3 className="text-lg font-bold text-stone-800 dark:text-stone-100 mb-1">
             Unggah Foto Biji Kopi
           </h3>
-          <p className="text-xs sm:text-sm text-stone-500 mb-6">
+          <p className="text-xs sm:text-sm text-stone-500 dark:text-stone-400 mb-6">
             Tarik & lepaskan file foto ke sini, atau klik untuk memilih file dari komputer / galeri HP.
           </p>
 
@@ -89,7 +89,7 @@ export const DropzoneUpload: React.FC<DropzoneUploadProps> = ({
                 e.stopPropagation();
                 fileInputRef.current?.click();
               }}
-              className="px-5 py-2.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-white text-xs sm:text-sm font-semibold flex items-center gap-2 shadow-sm transition-all"
+              className="px-5 py-2.5 rounded-xl bg-stone-900 dark:bg-stone-800 hover:bg-stone-800 dark:hover:bg-stone-700 text-white text-xs sm:text-sm font-semibold flex items-center gap-2 shadow-sm transition-all"
             >
               <ImageIcon className="w-4 h-4" />
               Pilih dari Galeri
@@ -101,14 +101,14 @@ export const DropzoneUpload: React.FC<DropzoneUploadProps> = ({
                 e.stopPropagation();
                 onOpenLiveCamera();
               }}
-              className="px-5 py-2.5 rounded-xl bg-amber-700 hover:bg-amber-800 text-white text-xs sm:text-sm font-semibold flex items-center gap-2 shadow-md shadow-amber-900/10 transition-all"
+              className="px-5 py-2.5 rounded-xl bg-amber-700 hover:bg-amber-800 dark:bg-amber-600 dark:hover:bg-amber-700 text-white text-xs sm:text-sm font-semibold flex items-center gap-2 shadow-md shadow-amber-900/10 transition-all"
             >
               <Camera className="w-4 h-4" />
               Buka Kamera Langsung
             </button>
           </div>
 
-          <span className="mt-4 text-[11px] text-stone-400 font-medium">
+          <span className="mt-4 text-[11px] text-stone-400 dark:text-stone-500 font-medium">
             Format yang didukung: JPG, PNG, WEBP (Resolusi rekomendasi min. 400x400 px)
           </span>
         </div>

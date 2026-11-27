@@ -52,7 +52,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50">
+    <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 transition-colors duration-200">
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
 
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
@@ -61,36 +61,36 @@ export function App() {
           <div className="max-w-4xl mx-auto space-y-8">
             {/* Hero Banner */}
             <div className="text-center space-y-3">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 text-amber-900 border border-amber-200">
-                <Sparkles className="w-3.5 h-3.5 text-amber-700" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800">
+                <Sparkles className="w-3.5 h-3.5 text-amber-700 dark:text-amber-400" />
                 Computer Vision AI Berbasis Standar SNI Kopi Biji
               </span>
-              <h1 className="text-3xl sm:text-5xl font-black text-stone-900 tracking-tight">
-                Pindai & Nilai Mutu <span className="text-amber-700">Biji Kopi</span>
+              <h1 className="text-3xl sm:text-5xl font-black text-stone-900 dark:text-stone-100 tracking-tight">
+                Pindai & Nilai Mutu <span className="text-amber-700 dark:text-amber-500">Biji Kopi</span>
               </h1>
-              <p className="text-sm sm:text-base text-stone-600 max-w-xl mx-auto leading-relaxed">
+              <p className="text-sm sm:text-base text-stone-600 dark:text-stone-300 max-w-xl mx-auto leading-relaxed">
                 Klasifikasikan biji bagus, rusak/pecah, berjamur, dan asam secara otomatis. Dapatkan penilaian Grade 1 hingga Grade 4 instan langsung dari foto atau kamera HP.
               </p>
             </div>
 
             {/* Error Message */}
             {analysisError && (
-              <div className="bg-rose-50 border border-rose-200 text-rose-800 p-4 rounded-2xl flex items-center gap-3 text-xs font-semibold">
-                <AlertCircle className="w-5 h-5 flex-shrink-0 text-rose-600" />
+              <div className="bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-rose-800 dark:text-rose-200 p-4 rounded-2xl flex items-center gap-3 text-xs font-semibold">
+                <AlertCircle className="w-5 h-5 flex-shrink-0 text-rose-600 dark:text-rose-400" />
                 <span>{analysisError}</span>
               </div>
             )}
 
             {/* Loading Indicator */}
             {isLoading && (
-              <div className="bg-white rounded-3xl p-12 border border-stone-200 text-center shadow-lg space-y-4">
-                <div className="w-16 h-16 rounded-2xl bg-amber-100 text-amber-800 mx-auto flex items-center justify-center animate-spin">
+              <div className="bg-white dark:bg-stone-900 rounded-3xl p-12 border border-stone-200 dark:border-stone-800 text-center shadow-lg space-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-400 mx-auto flex items-center justify-center animate-spin">
                   <Coffee className="w-8 h-8" />
                 </div>
-                <h3 className="text-base font-bold text-stone-900">
+                <h3 className="text-base font-bold text-stone-900 dark:text-stone-100">
                   Menganalisis Morfologi & Cacat Biji Kopi...
                 </h3>
-                <p className="text-xs text-stone-500 max-w-xs mx-auto">
+                <p className="text-xs text-stone-500 dark:text-stone-400 max-w-xs mx-auto">
                   Mengekstraksi tekstur Laplacian, spektrum warna LAB/HSV, dan menghitung nilai cacat SNI...
                 </p>
               </div>

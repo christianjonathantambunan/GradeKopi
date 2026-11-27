@@ -19,7 +19,7 @@ const SAMPLES: SampleItem[] = [
     category: 'bagus',
     image: '/samples/bagus_1.jpg',
     badge: 'Normal / Sound',
-    badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-300',
+    badgeColor: 'bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-700',
     desc: 'Biji kopi utuh tanpa retak/lubang, warna seragam.',
   },
   {
@@ -28,7 +28,7 @@ const SAMPLES: SampleItem[] = [
     category: 'rusak',
     image: '/samples/rusak_1.jpg',
     badge: 'Broken Defect',
-    badgeColor: 'bg-amber-100 text-amber-800 border-amber-300',
+    badgeColor: 'bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300 border-amber-300 dark:border-amber-700',
     desc: 'Kerusakan mekanis kulit & pecahan biji saat hulling.',
   },
   {
@@ -37,7 +37,7 @@ const SAMPLES: SampleItem[] = [
     category: 'jamur',
     image: '/samples/jamur_1.jpg',
     badge: 'Mold / Fungi',
-    badgeColor: 'bg-rose-100 text-rose-800 border-rose-300',
+    badgeColor: 'bg-rose-100 dark:bg-rose-950/80 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-700',
     desc: 'Tercemar miselium jamur akibat lembap berlebih.',
   },
   {
@@ -46,7 +46,7 @@ const SAMPLES: SampleItem[] = [
     category: 'asam',
     image: '/samples/asam_1.jpg',
     badge: 'Sour / Fermented',
-    badgeColor: 'bg-orange-100 text-orange-800 border-orange-300',
+    badgeColor: 'bg-orange-100 dark:bg-orange-950/80 text-orange-800 dark:text-orange-300 border-orange-300 dark:border-orange-700',
     desc: 'Oksidasi fermentasi asam cuka berlebih / stinker bean.',
   },
   {
@@ -55,7 +55,7 @@ const SAMPLES: SampleItem[] = [
     category: 'out_of_domain',
     image: '/samples/bukan_kopi.jpg',
     badge: 'Slide 4 Test',
-    badgeColor: 'bg-stone-200 text-stone-800 border-stone-300',
+    badgeColor: 'bg-stone-200 dark:bg-stone-700 text-stone-800 dark:text-stone-200 border-stone-300 dark:border-stone-600',
     desc: 'Objek non-kopi untuk menguji penanganan ketidakpastian AI.',
   },
 ];
@@ -67,15 +67,15 @@ interface SampleGalleryProps {
 
 export const SampleGallery: React.FC<SampleGalleryProps> = ({ onSelectSample, isLoading }) => {
   return (
-    <div className="w-full mt-6 bg-stone-50 border border-stone-200/80 rounded-2xl p-5">
+    <div className="w-full mt-6 bg-stone-50 dark:bg-stone-900/60 border border-stone-200/80 dark:border-stone-800 rounded-2xl p-5 transition-colors">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
-          <Sparkles className="w-4 h-4 text-amber-700" />
-          <h4 className="text-xs sm:text-sm font-bold text-stone-800 uppercase tracking-wider">
+          <Sparkles className="w-4 h-4 text-amber-700 dark:text-amber-400" />
+          <h4 className="text-xs sm:text-sm font-bold text-stone-800 dark:text-stone-200 uppercase tracking-wider">
             Coba Cepat Sampel Dataset Asli (1-Klik Uji Coba Demo)
           </h4>
         </div>
-        <span className="text-[11px] text-stone-500 hidden sm:inline">
+        <span className="text-[11px] text-stone-500 dark:text-stone-400 hidden sm:inline">
           Diambil langsung dari dataset pelatihan
         </span>
       </div>
@@ -87,10 +87,10 @@ export const SampleGallery: React.FC<SampleGalleryProps> = ({ onSelectSample, is
             type="button"
             disabled={isLoading}
             onClick={() => onSelectSample(sample.image)}
-            className="group text-left bg-white rounded-xl p-2.5 border border-stone-200 hover:border-amber-600 hover:shadow-md transition-all hover:-translate-y-0.5 flex flex-col justify-between"
+            className="group text-left bg-white dark:bg-stone-850 rounded-xl p-2.5 border border-stone-200 dark:border-stone-750 hover:border-amber-600 dark:hover:border-amber-500 hover:shadow-md transition-all hover:-translate-y-0.5 flex flex-col justify-between"
           >
             <div>
-              <div className="aspect-square w-full rounded-lg overflow-hidden bg-stone-100 mb-2 border border-stone-100 relative">
+              <div className="aspect-square w-full rounded-lg overflow-hidden bg-stone-100 dark:bg-stone-800 mb-2 border border-stone-100 dark:border-stone-800 relative">
                 <img
                   src={sample.image}
                   alt={sample.name}
@@ -102,14 +102,14 @@ export const SampleGallery: React.FC<SampleGalleryProps> = ({ onSelectSample, is
                   {sample.badge}
                 </span>
               </div>
-              <h5 className="text-xs font-bold text-stone-900 group-hover:text-amber-800 line-clamp-1">
+              <h5 className="text-xs font-bold text-stone-900 dark:text-stone-100 group-hover:text-amber-700 dark:group-hover:text-amber-400 line-clamp-1">
                 {sample.name}
               </h5>
-              <p className="text-[10px] text-stone-500 line-clamp-2 mt-0.5">
+              <p className="text-[10px] text-stone-500 dark:text-stone-400 line-clamp-2 mt-0.5">
                 {sample.desc}
               </p>
             </div>
-            <div className="mt-2 pt-1 border-t border-stone-100 flex items-center justify-between text-[10px] font-semibold text-amber-700">
+            <div className="mt-2 pt-1 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between text-[10px] font-semibold text-amber-700 dark:text-amber-400">
               <span>Uji foto ini</span>
               <span>→</span>
             </div>
